@@ -177,9 +177,9 @@ def plot_bounds(ax, ob):
     x, y = zip(*list((p.x, p.y) for p in ob.boundary))
     ax.plot(x, y, '.', color='#000000', zorder=1)
 
-def plot_line(ax, ob):
+def plot_line(ax, ob, color='cyan'):
     x, y = ob.xy
-    ax.plot(x, y, color='cyan', alpha=0.7, linewidth=3, solid_capstyle='round', zorder=2)
+    ax.plot(x, y, color, alpha=0.7, linewidth=3, solid_capstyle='round', zorder=2)
 
 def print_border(ax, waypoints, inner_border_waypoints, outer_border_waypoints):
     line = LineString(waypoints)
